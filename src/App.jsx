@@ -1,4 +1,3 @@
-
 import "./styles/globals.css";
 
 function App() {
@@ -8,5 +7,3 @@ function App() {
     </div>
   )
 }
-
-export default App
