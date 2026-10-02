@@ -1,0 +1,32 @@
+.composer{
+  padding: 12px;
+  border-top: 1px solid var(--line);
+  display:flex;
+  gap: 10px;
+  background: rgba(10,10,15,.18);
+}
+
+.composer__input{
+  flex:1;
+  border-radius: 14px;
+  border:1px solid var(--line);
+  background: rgba(22,25,35,.6);
+  padding: 10px 12px;
+  color: var(--text);
+  outline:none;
+}
+
+.composer__btn{
+  border-radius: 14px;
+  padding: 10px 14px;
+  border:1px solid rgba(47,107,255,.65);
+  background: rgba(47,107,255,.20);
+  color: var(--text);
+  font-weight:900;
+  cursor:pointer;
+}
+
+.composer__btn:disabled{
+  opacity:.55;
+  cursor:not-allowed;
+}
