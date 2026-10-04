@@ -1,0 +1,72 @@
+.topbar{
+  height:56px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 0 16px;
+  border-bottom:1px solid var(--line);
+  background: rgba(10,10,15,.55);
+  backdrop-filter: blur(10px);
+}
+
+.topbar__brand{
+  font-weight:800;
+  letter-spacing:.08em;
+  color:#EAF0FF;
+}
+
+.topbar__nav{
+  display:flex;
+  gap:14px;
+}
+
+.topbar__link{
+  padding:8px 10px;
+  border-radius:10px;
+  border:1px solid transparent;
+  color: var(--muted);
+  font-weight:600;
+  font-size:14px;
+}
+
+.topbar__userGroup{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+
+.topbar__userInfo{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+}
+
+.topbar__userName{
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.topbar__logoutBtn{
+  border-radius: 10px;
+  padding: 6px 12px;
+  border: 1px solid rgba(255,92,92,.35);
+  background: rgba(255,92,92,.1);
+  color: #ff8b8b;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+
+.topbar__logoutBtn:hover{
+  background: rgba(255,92,92,.22);
+  border-color: rgba(255,92,92,.6);
+}
+
+.topbar__link.isActive,
+.topbar__link:hover{
+  border-color: rgba(47,107,255,.45);
+  background: rgba(47,107,255,.12);
+  color: var(--text);
+}
