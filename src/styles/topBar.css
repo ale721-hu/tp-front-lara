@@ -71,3 +71,16 @@
   color: var(--text);
 }
 
+
+.brand-short {
+  display: none;
+}
+
+@media (max-width: 420px) {
+  .brand-full {
+    display: none;
+  }
+  .brand-short {
+    display: inline;
+  }
+}

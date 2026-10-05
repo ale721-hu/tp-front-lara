@@ -133,7 +133,7 @@
     display: none;
   }
 
-  /* La lista pasa a ser una columna centrada de avatares */
+  /* La lista pasa en una columna centrada de avatares */
   .sidebar__list{
     border-top: none;
     padding-top: 0;

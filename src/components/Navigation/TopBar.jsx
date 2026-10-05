@@ -20,7 +20,8 @@ export default function TopBar() {
   return (
     <header className="topbar">
       <NavLink to={user ? `/chat/${topChatId}?query=` : "/login"} className="topbar__brand">
-        WhatsAPPX
+        <span className="brand-full">WhatsAPPX</span>
+        <span className="brand-short">WAppX</span>
       </NavLink>
 
       <nav className="topbar__nav">

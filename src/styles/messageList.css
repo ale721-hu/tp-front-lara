@@ -32,7 +32,7 @@
   font-weight:700;
 }
 
-/* ── Meta: hora + tick en la misma fila ─────────────────────────────────── */
+/*Meta: hora + tick en la misma fila*/
 .msg__meta{
   display: flex;
   align-items: center;
@@ -51,13 +51,13 @@
   white-space: nowrap;
 }
 
-/* ── Tick de lectura // ─────────────────────────────────────────────────── */
+/* Tick de lectura //  */
 .msg__readTick{
   font-size: 12px;
   font-weight: 900;
-  letter-spacing: -2px;        /* las barras quedan más juntas */
+  letter-spacing: -1px;        /* ajuste barras */
   line-height: 1;
-  font-style: italic;          /* las inclina levemente */
+  font-style: italic;          /* inclinacion adicional */
   user-select: none;
   transition: color .25s ease;
 }
