@@ -2,6 +2,7 @@ import { useEffect, useMemo, useCallback } from "react";
 import { useChatContext } from "./useChatContext";
 import { useSearchParams } from "react-router-dom";
 
+
 export default function useChat() {
   const { chats, setChats, activeChatId, setActiveChatId, activeChat, sendMessage } = useChatContext();
   const [searchParams] = useSearchParams();

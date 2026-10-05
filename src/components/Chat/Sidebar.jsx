@@ -3,6 +3,7 @@ import "../../styles/sidebar.css";
 import Avatar from "../UI/Avatar";
 import Input from "../UI/Input";
 
+
 export default function Sidebar({ chats, activeChatId, onSelectChat, query = "", setSearchParams }) {
   const list = useMemo(() => chats, [chats]);
 

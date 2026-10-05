@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import "../../styles/messageList.css";
 
+
 function formatTime(ts) {
   const d = new Date(ts);
   return d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });

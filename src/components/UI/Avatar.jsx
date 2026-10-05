@@ -1,5 +1,6 @@
 import "../../styles/ui.css";
 
+
 export default function Avatar({ name = "", color = "#2F6BFF", size = 40 }) {
   const initials = (name || "?")
     .split(" ")

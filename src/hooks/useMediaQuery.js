@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 export default function useMediaQuery(query) {
   const [matches, setMatches] = useState(() => {
     if (typeof window === "undefined") return false;

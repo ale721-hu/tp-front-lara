@@ -1,6 +1,7 @@
 import "../../styles/emptyState.css";
 import Button from "../UI/Button";
 
+
 export default function EmptyState({ onSelectFirstChat }) {
   return (
     <div className="emptyState">

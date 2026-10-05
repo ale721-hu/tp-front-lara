@@ -4,6 +4,7 @@ import { useChatContext } from "../../hooks/useChatContext";
 import Avatar from "../UI/Avatar";
 import "../../styles/topBar.css";
 
+
 export default function TopBar() {
   const { user, logout } = useAuth();
   const { chats } = useChatContext();

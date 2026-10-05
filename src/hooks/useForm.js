@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 export default function useForm(initialValues, validate) {
   const [values, setValues] = useState(initialValues);
   const [touched, setTouched] = useState({});
@@ -23,7 +24,7 @@ export default function useForm(initialValues, validate) {
     setTouched({});
     setErrors({});
   }
-  
+
   function canSubmit() {
     if (!validate) return true;
     const errs = validate(values);

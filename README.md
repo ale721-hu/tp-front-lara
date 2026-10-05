@@ -1,16 +1,33 @@
-# React + Vite
+# WhatsAPPX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación de mensajería en tiempo real inspirada en WhatsApp, desarrollada con **React** y **Vite**.
 
-Currently, two official plugins are available:
+## Características principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Lista de Chats:** Búsqueda y selección de conversaciones activas.
+- **Vista de Chat:** Encabezado con estado del usuario (`ChatHeader`), lista de mensajes (`MessageList`) e interfaz para enviar textos (`MessageComposer`).
+- **Estado Vacío:** Manejo de pantallas de bienvenida cuando no hay chats seleccionados (`EmptyState`).
 
-## React Compiler
+## Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React](https://react.dev/) - Librería para la interfaz de usuario.
+- [Vite](https://vitejs.dev/) - Empaquetador y entorno de desarrollo rápido.
+- [ESLint](https://eslint.org/) - Linter para mantener la calidad del código.
 
-## Expanding the ESLint configuration
+## Comandos de desarrollo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Para ejecutar el proyecto en tu entorno local:
+
+```bash
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
+
+# Compilar para producción
+npm run build
+
+# Previsualizar build de producción
+npm run preview
+```

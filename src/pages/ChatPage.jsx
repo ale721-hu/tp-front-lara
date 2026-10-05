@@ -9,6 +9,7 @@ import MessageComposer from "../components/Chat/MessageComposer";
 import EmptyState from "../components/Chat/EmptyState";
 import "../styles/chatPage.css";
 
+
 export default function ChatPage() {
   const { user } = useAuth();
   const navigate = useNavigate();

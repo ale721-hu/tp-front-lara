@@ -1,6 +1,7 @@
 import "../../styles/chatHeader.css";
 import Avatar from "../UI/Avatar";
 
+
 export default function ChatHeader({ name, avatarColor = "#2F6BFF" }) {
   return (
     <div className="chatHeader">

@@ -7,6 +7,7 @@ import Button from "../components/UI/Button";
 import Input from "../components/UI/Input";
 import "../styles/loginPage.css";
 
+
 export default function LoginPage() {
   const navigate = useNavigate();
   const { user, setUser } = useAuth();
