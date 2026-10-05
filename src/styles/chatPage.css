@@ -41,3 +41,35 @@
     height: calc(100vh - 56px - 16px);
   }
 }
+
+/* ── Layout de tira horizontal en ≤400px ── */
+@media (max-width: 400px){
+  .chatGrid{
+    /* Una sola columna: sidebar arriba (tira) + chat abajo */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0;
+    height: calc(100vh - 56px - 8px);
+    min-height: 0;
+  }
+
+  /* La tira va primero (row 1) */
+  .chatSidebarWrap{
+    grid-row: 1;
+    min-width: 0;
+    /* sin altura fija, se adapta al contenido del sidebar */
+  }
+
+  /* El chat ocupa el resto (row 2) */
+  .chatMain{
+    grid-row: 2;
+    min-height: 0;
+  }
+
+  /* El chatCard en mobile: esquinas superiores planas (la tira va pegada arriba) */
+  .chatCard{
+    border-radius: 0 0 18px 18px;
+    border-top: none;
+    height: 100%;
+  }
+}

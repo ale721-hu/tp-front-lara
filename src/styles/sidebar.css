@@ -195,6 +195,118 @@
   }
 }
 
+/* Ocultar el botón de tira en pantallas > 400px */
+@media (min-width: 401px){
+  .sidebar__stripNewBtn{
+    display: none;
+  }
+}
+
+
+/* ── Sidebar horizontal (strip) para ≤400px ───────────────────────────────
+   El sidebar se renderiza encima del ChatHeader en una tira horizontal.
+   Los avatares se deslizan horizontalmente (scroll type slide).
+   El botón "+" queda fijo a la derecha de la tira.
+───────────────────────────────────────────────────────────────────────── */
+@media (max-width: 400px){
+
+  /* La tira horizontal reemplaza al sidebar columnar */
+  .sidebar{
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    padding: 8px 6px;
+    border-radius: 14px 14px 0 0;
+    border-bottom: none;
+    gap: 0;
+    /* sin scroll aquí, lo maneja la lista */
+    overflow: visible;
+    position: relative;
+  }
+
+  /* Búsqueda oculta igual que en ≤820px */
+  .sidebar__search{
+    display: none;
+  }
+
+  /* La lista ocupa todo el ancho disponible y hace scroll horizontal */
+  .sidebar__list{
+    flex-direction: row;
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    border-top: none;
+    padding-top: 0;
+    gap: 8px;
+    padding: 2px 4px;
+    /* scrollbar invisible */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .sidebar__list::-webkit-scrollbar{
+    display: none;
+  }
+
+  /* Ítem: avatar circular, idéntico al modo columna ≤820px */
+  .sidebar__item{
+    padding: 0;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+  }
+
+  /* Ocultar texto */
+  .sidebar__meta{
+    display: none;
+  }
+
+  /* Botón "+" compacto: oculto porque se usa el inline de la tira */
+  .sidebar__newBtnCompact{
+    display: none;
+  }
+
+  /* Botón "+" de la barra de búsqueda (que está oculta): no aplica.
+     En su lugar, reutilizamos el newBtnCompact pero lo reubicamos
+     dentro de la tira usando flex + position sticky */
+  .sidebar__stripNewBtn{
+    flex-shrink: 0;
+    position: sticky;
+    right: 0;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(47,107,255,.55);
+    background: rgba(22,25,35,.92);
+    color: var(--text);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background .18s ease, border-color .18s ease, transform .15s ease;
+    padding: 0;
+    margin-left: 4px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .sidebar__stripNewBtn:hover{
+    background: rgba(47,107,255,.28);
+    border-color: rgba(47,107,255,.9);
+    transform: scale(1.08);
+  }
+}
+
 
 
 /* ── Modal "Nuevo chat" ─────────────────────────────────────────────────── */

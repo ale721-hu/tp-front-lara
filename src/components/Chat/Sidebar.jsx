@@ -87,6 +87,17 @@ export default function Sidebar({ chats, activeChatId, onSelectChat, query = "",
           )}
         </div>
 
+        {/* ── Botón "+" inline en la tira horizontal ≤400px ── */}
+        <button
+          type="button"
+          className="sidebar__stripNewBtn"
+          title="Nuevo chat"
+          aria-label="Nuevo chat"
+          onClick={() => setShowNewChat(true)}
+        >
+          +
+        </button>
+
         {/* ── Botón "+" solo visible en modo compacto ≤820px ── */}
         <div className="sidebar__newBtnCompact">
           <div className="sidebar__compact-divider" />

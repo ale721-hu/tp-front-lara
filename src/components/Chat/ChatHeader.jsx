@@ -15,7 +15,6 @@ export default function ChatHeader({ name, avatarColor = "#2F6BFF" }) {
           </div>
         </div>
       </div>
-      <div className="chatHeader__right">Mensajes seguros</div>
     </div>
   );
 }
