@@ -33,12 +33,11 @@
   flex-direction:column;
 }
 
+
 @media (max-width: 820px){
   .chatGrid{
-    grid-template-columns: 1fr;
-    height:auto;
+    grid-template-columns: 64px 1fr;
+    gap: 8px;
+    height: calc(100vh - 56px - 16px);
   }
-  .chatSidebarWrap{ order: 1; }
-  .chatMain{ order: 2; }
 }
-

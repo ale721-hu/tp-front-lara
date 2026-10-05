@@ -16,7 +16,7 @@ export default function ChatPage() {
 
   const { chatId } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { activeChat, activeChatId, setActiveChatId, filteredChats, handleSend } = useChat();
+  const { activeChat, activeChatId, setActiveChatId, filteredChats, handleSend, addChat } = useChat();
 
   // Seguridad: si no hay usuario, vuelve a login
   useEffect(() => {
@@ -51,6 +51,10 @@ export default function ChatPage() {
             onSelectChat={handleSelectChat}
             query={query}
             setSearchParams={setSearchParams}
+            onNewChat={(contact) => {
+              const newId = addChat(contact);
+              handleSelectChat(newId);
+            }}
           />
         </aside>
 

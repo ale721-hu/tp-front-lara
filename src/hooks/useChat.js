@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 
 
 export default function useChat() {
-  const { chats, setChats, activeChatId, setActiveChatId, activeChat, sendMessage } = useChatContext();
+  const { chats, setChats, activeChatId, setActiveChatId, activeChat, sendMessage, addChat } = useChatContext();
   const [searchParams] = useSearchParams();
   const query = (searchParams.get("query") || "").toLowerCase();
 
@@ -35,6 +35,7 @@ export default function useChat() {
     setActiveChatId,
     activeChat,
     query,
-    handleSend
+    handleSend,
+    addChat
   };
 }

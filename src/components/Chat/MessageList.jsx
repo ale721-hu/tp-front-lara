@@ -7,6 +7,23 @@ function formatTime(ts) {
   return d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 }
 
+/**
+ * Indicador de estado de lectura con doble barra // estilizada.
+ * Solo se muestra en mensajes enviados por "me".
+ */
+function ReadStatus({ from, read }) {
+  if (from !== "me") return null;
+  return (
+    <span
+      className={`msg__readTick ${read ? "msg__readTick--read" : "msg__readTick--unread"}`}
+      title={read ? "Leído" : "Enviado"}
+      aria-label={read ? "Leído" : "Enviado"}
+    >
+      / /
+    </span>
+  );
+}
+
 export default function MessageList({ messages = [] }) {
   const ref = useRef(null);
 
@@ -27,7 +44,10 @@ export default function MessageList({ messages = [] }) {
           <div key={m.id} className={`msg ${m.from === "me" ? "msg--me" : "msg--them"}`}>
             <div className="msg__bubble">
               <div className="msg__text">{m.text}</div>
-              <div className="msg__time">{formatTime(m.ts)}</div>
+              <div className="msg__meta">
+                <span className="msg__time">{formatTime(m.ts)}</span>
+                <ReadStatus from={m.from} read={m.read} />
+              </div>
             </div>
           </div>
         ))

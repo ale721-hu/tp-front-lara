@@ -32,9 +32,43 @@
   font-weight:700;
 }
 
-.msg__time{
-  margin-top:6px;
-  font-size: 11px;
-  color: rgba(174,182,199,.85);
+/* ── Meta: hora + tick en la misma fila ─────────────────────────────────── */
+.msg__meta{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  justify-content: flex-end;   /* pegados a la derecha dentro del bubble */
 }
 
+.msg--them .msg__meta{
+  justify-content: flex-start;
+}
+
+.msg__time{
+  font-size: 11px;
+  color: rgba(174,182,199,.85);
+  white-space: nowrap;
+}
+
+/* ── Tick de lectura // ─────────────────────────────────────────────────── */
+.msg__readTick{
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: -2px;        /* las barras quedan más juntas */
+  line-height: 1;
+  font-style: italic;          /* las inclina levemente */
+  user-select: none;
+  transition: color .25s ease;
+}
+
+/* Sin leer: color tenue, mismo tono que la hora */
+.msg__readTick--unread{
+  color: rgba(174,182,199,.75);
+}
+
+/* Leído: blanco nítido, peso bold */
+.msg__readTick--read{
+  color: #E9EEF7;
+  font-weight: 900;
+}
